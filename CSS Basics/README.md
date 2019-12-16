@@ -29,3 +29,15 @@ p {
 
 
 ```
+
+## List item Nav
+
+```css 
+li {
+    display: inline-block;
+    padding: 0 12px;
+    border-right: solid 1px;
+    margin: 80px 0;
+}
+
+```
