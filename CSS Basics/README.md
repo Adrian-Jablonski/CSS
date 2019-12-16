@@ -41,3 +41,79 @@ li {
 }
 
 ```
+
+## Box sizing
+
+```css 
+div {
+    width: 960px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box; /* Box sizing will keep the size of the div at 960px and will not add 100px to that value from the padding */
+}
+
+* {
+    box-sizing: border-box; /* Setting box-sizing to border-box using the universal selector will save us from writing it multiple times on multiple elements */
+}
+
+```
+
+## Max width on image
+
+```css 
+img {
+    max-width: 100% /* Makes image adjust to screen size */
+}
+```
+
+## Background images
+
+```css 
+.image {
+    background-color: #ffa949;
+    background-image: url('../img/image1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background: #ffa949 url('../img/imgage1.png') no-repeat center / cover; /* Shorthand background property */
+}
+```
+
+## Floats
+
+```html
+<div class="group">
+    <div class="col-1">
+    
+    </div>
+    <div class="col-2">
+    
+    </div>
+
+</div>
+
+```
+
+```css 
+.col-1,
+.col-2 {
+    width: 46.5%;
+}
+
+.col-1 {
+    float: left;
+}
+
+.col-2 {
+    float: right;
+}
+
+/* Float Clearfix - Fixed the divs that were collapsed when using float ---------- */
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+```
