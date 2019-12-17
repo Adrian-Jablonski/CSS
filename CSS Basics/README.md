@@ -117,3 +117,31 @@ img {
 }
 
 ```
+
+## Text shadow
+
+```css 
+
+h1 {
+    /* The first value sets the horizontal offset of the shadow. 
+    The second value sets the vertical offset. 
+    The third is an optional value that sets the blur radius of the shadow. 
+    The fourth value is the color value. */
+    text-shadow: 5px 8px 10px #222;
+}
+
+```
+
+## Box Shadow
+
+```css 
+
+div {
+    /* 20px spreads shadow on every side of div */
+    box-shadow: 15px 15px 10px 20px rgba(0, 0, 0, .8);
+
+    box-shadow: inset 0 0 50px 10px rgba(0, 0, 0, 1); /* Inset moves the shadow to the inside of the div */
+}
+
+```
+
