@@ -145,3 +145,15 @@ div {
 
 ```
 
+## Gradients
+
+```css
+div {
+    background-image: linear-gradient(45deg, #ffa949, firebrick);
+
+    background-image: radial-gradient(circle, #ffa949, firebrick);
+
+    /* Gradient Color Stops */
+    background-image: linear-gradient(45deg, #ffa949 0%, firebrick 50%, dodgerblue 100%);
+}
+```
