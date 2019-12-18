@@ -40,8 +40,9 @@ a {
 
 .main-footer {
     text-align: center;
-	padding: 2em 0;
+	padding: 1em 0;
     background: #d9e4ea;
+    height: 89px;
 }
 
 
@@ -51,9 +52,12 @@ a {
 
 /* Desktop CSS */
 @media (min-width: 769px) {
-.container {
-    width: 70%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
+    .wrap {
+        min-height: calc(100vh - 89px);
+    }
+    .container {
+        width: 70%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
 }
