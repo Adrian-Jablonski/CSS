@@ -157,3 +157,46 @@ div {
     background-image: linear-gradient(45deg, #ffa949 0%, firebrick 50%, dodgerblue 100%);
 }
 ```
+
+## Multiple Background and Transparent Gradients
+
+```css
+div {
+    background: linear-gradient(#ffa949, transparent 90%)   /* Overlays a transparent background on the background image below */
+                #ffa949 url('../img/mountains.jpg') no-repeat center;
+}
+
+```
+
+## Web Fonts
+
+```css 
+@font-face {
+    font-family: 'Abolition Regular';
+    src: url('../fonts/abolition-regular-webfont.eot'); /* file path is to a font file saved in fonts folder */
+}
+
+h1 {
+    /* Using the font that was set in @font-face by font-family name */
+    font-family: 'Abolition Regular', Helvetica, Arial;
+}
+
+```
+
+## Media queries
+
+```css
+@media (max-width: 960px) { /* Targets anything at or below 960px */ 
+    body {
+        background: blue;
+    }
+    p {
+        color: white;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 700px) { /* Targets anything between 481px and 700px */ 
+
+}
+
+```
