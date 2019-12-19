@@ -125,5 +125,27 @@ a {
     .main-nav li {
         margin-right: -0.3125em; /* Removes white space between nav links */  
     }
-    
+
+    /* Columns */
+
+    .col {
+        float: left;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .secondary {
+        width: 40%;
+    }
+
+    .primary {
+        width: 60%;
+    }
+
+    /* Used to fix collapsed floats by preventing containers height from collapsing */
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
