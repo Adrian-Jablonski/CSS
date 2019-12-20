@@ -6,6 +6,10 @@
 	box-sizing: border-box;
 }
 
+h1 {
+	line-height: .5em;
+}
+
 body {
 	font-family: 'Varela Round', sans-serif;
 	line-height: 1.6;
@@ -42,10 +46,15 @@ img {
 
 /* ---- Navigation ---- */
 
+.main-header {
+	padding-top: 10px;
+}
+
 .name {
 	font-size: 1.25em;
 }
 
+.name,
 .name a,
 .main-nav a {
 	text-align: center;
@@ -55,10 +64,22 @@ img {
 	font-size: .95em;
 	color: #3acec2;
 	text-transform: uppercase;
+	display: inline-block;
+	width: 100%;
 }
 
 .main-nav a:hover {
 	color: #093a58;
+}
+
+.banner,
+.main-footer {
+	text-align: center;
+}
+
+.main-nav li {
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 /* ---- Layout Containers ---- */
@@ -66,12 +87,20 @@ img {
 .banner {
 	color: #fff;
 	background: #3acec2;
+	padding: 40px 0;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 .main-footer {
 	background: #d9e4ea;
 	padding: 2em 0;
 	margin-top: 30px;
+}
+
+.container {
+	width: 95%;
+	margin: 0 auto;
 }
 
 /* ---- Page Elements ---- */
@@ -86,7 +115,53 @@ img {
 
 @media (min-width: 769px) {
 
+	.wrap {
+		min-height: calc(100vh - 89px);
+	}
 
+	.secondary{
+		width: 50%;
+	}
+
+	.primary {
+		width: 50%;
+	}
+
+	.secondary, .primary {
+		float: left;
+	}
+
+	.col {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.name {
+		float: left;
+	}
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+
+	.name {
+		padding-left: 50px;
+	}
+
+	.main-nav a {
+		display: inline-block;
+		margin-right: .5em;
+	}
+
+	.container {
+		width: 80%;
+		max-width: 1150px;
+		margin: 0 auto;
+	}
 
 	/* ---- Float clearfix ---- */
 
@@ -96,4 +171,19 @@ img {
 		clear: both;
 	}
 
+}
+
+@media (min-width: 1025px) {
+	.secondary,
+	.tertiary{
+		width: 30%;
+	}
+
+	.primary {
+		width: 40%;
+	}
+
+	.col {
+		float: left;
+	}
 }
