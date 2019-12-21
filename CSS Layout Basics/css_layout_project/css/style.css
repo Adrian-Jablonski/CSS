@@ -131,6 +131,7 @@ figcaption {
 	position: absolute;
 	top: -15px;
 	right: -10px;
+	z-index: 1;
 }
 
 /* ================================= 
@@ -149,6 +150,7 @@ figcaption {
 		box-shadow: 0 1px 4px rgba(0,0,0,.4);
 		width: 100%;
 		top: 0;
+		z-index: 10;
 	}
 
 	.wrap {
