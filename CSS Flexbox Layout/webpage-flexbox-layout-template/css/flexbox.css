@@ -15,6 +15,7 @@
 
     .col {
         flex: 1 50%;
+        flex-direction: column;
     }
 
     .row {
@@ -23,6 +24,12 @@
 
     .secondary {
         order: -1;
+    }
+
+    .button {
+        /* Aligns button to the bottom of the flex box */
+        margin-top: auto;
+        align-self: flex-end;
     }
 
 }
