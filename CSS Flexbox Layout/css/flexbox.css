@@ -91,3 +91,20 @@
 .align-item-2 {
     align-self: flex-end;
 }
+
+.centering-flex-container {
+    display: flex;
+    min-height: 50vh;
+
+    /* #### Method 1: Use justify-content and align-items center in flex container  ####*/
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.centering-item-4 {
+    /* #### Method 2: Use justify-content in flex container and align-self center in item container  ####*/
+    /* align-self: center; */
+    
+    /* #### Method 3: Use Margin auto in item container  ####*/
+    margin: auto;
+}
