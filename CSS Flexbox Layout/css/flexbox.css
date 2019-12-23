@@ -4,12 +4,42 @@
 
 .flex-container {
     display: flex;
-    /* flex-direction: column; */
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container-justify {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.item-1 {
+/* ##### Flex container nav bar ##### */
+.nav-item-1 {
     /* Useful for creating navigations when using with a flex-container that has justify-content set to space-between; */
     margin-right: auto;
+}
+
+
+/* ##### Flex container Order ##### */
+.order-item-6 {
+    /* Items have default values of 0 */
+    /* Order is useful to use when creating media queries for different screen sizes */
+    order: -2
+}
+
+.order-item-3 {
+    order: -1;
+}
+
+.order-item-1 {
+    order: 1;
 }

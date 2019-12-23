@@ -13,7 +13,10 @@ body {
 	padding-left: 5%;
 	padding-right: 5%;
 }
-.flex-container {
+h2 {
+	color: black;
+}
+.container {
 	padding: 10px;
 	background: #fff;
   border-radius: 5px;
