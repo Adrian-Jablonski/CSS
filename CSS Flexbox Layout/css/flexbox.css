@@ -4,5 +4,12 @@
 
 .flex-container {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item-1 {
+    /* Useful for creating navigations when using with a flex-container that has justify-content set to space-between; */
+    margin-right: auto;
 }
