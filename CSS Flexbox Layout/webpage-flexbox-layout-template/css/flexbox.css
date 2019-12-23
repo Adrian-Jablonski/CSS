@@ -13,11 +13,19 @@
         align-items: center;
     }
 
+    .col {
+        flex: 1;
+    }
+
 }
 
 @media (min-width: 1025px) {
     .main-header {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .primary {
+        flex: 2;
     }
 }
