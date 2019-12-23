@@ -13,7 +13,7 @@ body {
 	padding-left: 5%;
 	padding-right: 5%;
 }
-.container {
+.flex-container {
 	padding: 10px;
 	background: #fff;
   border-radius: 5px;
