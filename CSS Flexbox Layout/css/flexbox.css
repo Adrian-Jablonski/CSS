@@ -43,3 +43,18 @@
 .order-item-1 {
     order: 1;
 }
+
+
+.flex-container-grow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item-grow {
+    flex-grow: 1;
+}
+
+.grow-item-1 {
+    flex-grow: 4;
+}
