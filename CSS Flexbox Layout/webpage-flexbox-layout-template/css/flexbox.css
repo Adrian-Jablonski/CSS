@@ -1,4 +1,19 @@
 /* ================================= 
+  Base Styles
+==================================== */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.row {
+    /* Creates a sticky footer with body being set to flex */
+    flex: 1;
+}
+
+/* ================================= 
   Media Queries
 ==================================== */
 
