@@ -17,3 +17,23 @@ span:only-child {
 li:empty {
     background-color: tomato;
 }
+
+/* nth-child Pseado-classes */
+
+li:nth-child(even) {
+    /* Selects all even children */
+    background: #30837d;
+    color: white;
+}
+
+li:nth-child(5) {
+    /* Selects 5th child only */
+    font-weight: bold;
+    background: black;
+    color: white;
+}
+
+li:nth-child(2n + 3) {
+    /* Selects every second element starting with the 3rd element */
+    padding-left: 100px;
+}
