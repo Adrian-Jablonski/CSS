@@ -24,16 +24,13 @@ a {
 /* Substring Matching Attribute Selectors ---- */
 
 a[href^="http://"] {
-    /* Begins with selector */
+    /* ^: Begins with selector */
     color: #52bab3;
     text-decoration: none;
-
-    background-repeat: no-repeat;
-    background-size: 18px 18px;
-    padding-left: 25px;
 }
 
 a[href$=".pdf"] {
+    /* $: Ends with selector */
     background-image: url('../img/icn-pdf.svg');
 }
 
@@ -45,10 +42,23 @@ a[href$=".zip"] {
     background-image: url('../img/icn-zip.svg');
 }
 
+a[href*="downloads"] {
+    /* *: Contains selector */
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    padding-left: 25px;
+}
 
+img[src*="thumb"] {
+    margin: 4px;
+    border: solid;
+    width: 180px;
+    height: 140px;
+}
 
-
-
+img[src*="lake"] {
+    border-color: red;
+}
 
 
 
