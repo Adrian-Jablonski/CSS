@@ -37,3 +37,14 @@ li:nth-child(2n + 3) {
     /* Selects every second element starting with the 3rd element */
     padding-left: 100px;
 }
+
+div:nth-of-type(4) {
+    /* Selects 4th div element child ignoring other elements*/
+    background: #30837d;
+    color: white;
+}
+
+div:nth-last-of-type(1) {
+    background: black;
+    color: white;
+}
