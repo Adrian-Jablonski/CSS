@@ -62,4 +62,23 @@ a[target] {
         width: auto;
         display: inline-block;
     }
+
+    .btn + .btn {
+        /* Adjecent sibling selector: If buttons are next to each other, the second button will have this rule applied to it */
+        margin-left: 20px;
+    }
+}
+
+/* Combinators ------------- */
+
+form > a {
+    /* Targets direct child of form */
+    font-size: .7em;
+}
+
+h1 ~ label {
+    /* General Sibling Combinator. Targets all the specified siblings that follow an element*/
+    background: tomato;
+    color: white;
+    padding: 5px;
 }
