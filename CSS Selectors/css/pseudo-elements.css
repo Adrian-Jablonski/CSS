@@ -39,3 +39,12 @@ h1::after {
     background: coral;
     margin: 0 10px;
 }
+
+.d-loads a::after {
+    /* Gets title attribute from selected element and places it as text after the element */
+    content: attr(title);
+    display: inline-block;
+    color: initial;
+    font-size: .65em;
+    margin-left: 5px;
+}
