@@ -1,0 +1,15 @@
+/* UI element state pseudo-classes */
+
+input:focus,
+textarea:focus {
+    border-color: #52bab3;
+}
+
+input:disabled {
+    background: #ddd;
+}
+
+input[type="checkbox"]:checked + label {
+    /* Selects label that is an immediate sibling of a checked checkbox */
+    font-weight: bold;
+}
