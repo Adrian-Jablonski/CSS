@@ -4,7 +4,16 @@
 
 .button {
 	color: #fff;
-	background: #4a89ca;
+  background: #4a89ca;
+  transition-duration: 1s;
+}
+
+.button:hover {
+  background: #d36a62;
+}
+
+.button:active {
+  background: #a33830;
 }
 
 /* ================================= 
