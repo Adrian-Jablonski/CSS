@@ -6,6 +6,7 @@
 	color: #fff;
   background: #4a89ca;
   transition-duration: 1s;
+  transition-property: background; /* Tells browser which properties to transition. Defaults to all if left out */
 }
 
 .button:hover {
