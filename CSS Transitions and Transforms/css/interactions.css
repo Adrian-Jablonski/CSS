@@ -3,14 +3,16 @@
 ==================================== */
 
 .button {
-	color: #fff;
-  background: #4a89ca;
-  transition-duration: 1s;
-  transition-property: background; /* Tells browser which properties to transition. Defaults to all if left out */
+  color: #4a89ca;
+  border: 2px solid;
+  transition-property: background, border-radius, color; /* Tells browser which properties to transition. Defaults to all if left out */
+  transition-duration: .4s, .8s; /* Comma seperated durations add different durations for each transition property. Background and color will have a .4s duration. Border-radius will have a .8s duration. Durations default to first duration listed if they are left blank for properties */
 }
 
 .button:hover {
-  background: #d36a62;
+  color: #fff;
+  background: #4a89ca;
+  border-radius: 1em;
 }
 
 .button:active {
