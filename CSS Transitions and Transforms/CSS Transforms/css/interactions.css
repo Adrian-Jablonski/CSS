@@ -32,14 +32,19 @@ img {
 }
 
 img:hover {
-	/* transform: rotate(-5deg); */
+	transform: rotate(-5deg);
 	/* transform: skewX(10deg); */
-	transform: scale(1.1);
+	/* transform: scale(1.1); */
 }
 
+.photo img {
+	transform-origin: 0 0;  /* Transforms images centered on a point that is passed in instead of the center of the image */ 
+}
 
 /* -- Row 2 --------- */
-
+.photo:hover img {
+	transform: scale(1.2);
+}
 
 
 /* -- Row 3 --------- */
