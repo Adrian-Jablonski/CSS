@@ -32,10 +32,9 @@ img {
 }
 
 img:hover {
-	/* transform: rotate(-5deg); */
+	transform: rotate(-5deg) scale(1.1); /* add multiple transforms using space seperation */
 	/* transform: skewX(10deg); */
 	/* transform: scale(1.1); */
-	transform: translateX(150px);
 }
 
 .photo img {
