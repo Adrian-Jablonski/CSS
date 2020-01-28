@@ -32,9 +32,10 @@ img {
 }
 
 img:hover {
-	transform: rotate(-5deg);
+	/* transform: rotate(-5deg); */
 	/* transform: skewX(10deg); */
 	/* transform: scale(1.1); */
+	transform: translateX(150px);
 }
 
 .photo img {
@@ -48,8 +49,22 @@ img:hover {
 
 
 /* -- Row 3 --------- */
+.slide .photo-overlay,
+.slide img {
+	transition: transform .6s ease-out;
+}
 
+.slide .photo-overlay {
+	transform: translateX(-100%);
+}
 
+.slide:hover .photo-overlay {
+	transform: translateX(0);
+}
+
+.slide:hover img {
+	transform: translateX(100%);
+}
 
 /* -- Logo ---------- */
 
