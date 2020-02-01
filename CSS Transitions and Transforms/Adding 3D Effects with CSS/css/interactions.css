@@ -13,8 +13,9 @@
   Photo 3D Transforms & Transitions
 ==================================== */
 
-.content {
+.photo-container {
   perspective: 700px;  /* Enables 3D (500 - 1500px is usually used)*/
+  /* perspective-origin: 50% 100%; Changes viewing position */
 }
 
 .photo {
@@ -23,7 +24,7 @@
 }
 
 .photo:hover {
-  transform: rotateX(-180deg);
+  transform: rotate3d(1, 0, 0, -180deg);
 }
 
 .side-a,
