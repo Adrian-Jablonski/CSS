@@ -27,8 +27,8 @@ ul {
 /* HEADER & FOOTER ----------------------------------------- */
 header {
   height: 460px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#009fe1), to(#3acec2)), url("../img/bg.jpg") no-repeat;
-  background: linear-gradient(#009fe1, #3acec2), url("../img/bg.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3acec2), to(#009fe1)), url("../img/bg.jpg") no-repeat;
+  background: linear-gradient(#3acec2, #009fe1), url("../img/bg.jpg") no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
 }
