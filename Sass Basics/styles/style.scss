@@ -14,12 +14,16 @@ $font-stack-secondary: "Bree Serif", serif;
 /* MIXINS ------------------------------------------------- */
 
 @mixin skewed {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  transform: skewY(-2deg);
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    transform: skewY(-2deg);
+    @content;
+  }
 }
 
 @mixin center {
@@ -66,7 +70,6 @@ header {
   background: linear-gradient($color-bg-light, $color-bg), url('../img/bg.jpg') no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
-  position: relative;
   h1 {
     color: #fff;
     font-size: 4.8em;
@@ -79,10 +82,9 @@ header {
     margin: 0;
   }
 
-  &::after {
-    content: "";
-    @include skewed;
-    background-color: #fff;
+  @include skewed {
+    // The below styles are added to the skewed elements if the mixin has @content
+    background-color: white;
     bottom: -25px;
   }
 }
@@ -92,10 +94,8 @@ footer {
   height: 100px;
   background-color: $color-shade;
   margin-top: 3.5em;
-  position: relative;
 
-  &::before {
-    @include skewed;
+  @include skewed {
     background-color: $color-shade;
     top: -25px;
   }
@@ -137,6 +137,7 @@ a {
     text-transform: uppercase;
     padding: 0.5em;
 
+    // & means 'a' so the below is equivalent to a:hover
     &:hover {
       color: $color-primary;
     }
@@ -167,17 +168,18 @@ a {
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
+}
 
-  // & means .btn so the below are equivalent to .btn-callout and .btn-info
-  &-callout {
-    font-size: 1.1em;
-    background-color: $color-secondary;
-  }
-  &-info {
-    font-size: 0.85em;
-    background-color: $color-primary;
-    margin-top: auto;
-  }
+.btn-callout {
+  @extend .btn; // Shares rules from .btn class 
+  font-size: 1.1em;
+  background-color: $color-secondary;
+}
+.btn-info {
+  @extend .btn; // Shares rules from .btn class
+  font-size: 0.85em;
+  background-color: $color-primary;
+  margin-top: auto;
 }
 
 /* MEDIA QUERIES ------------------------------------------------- */
