@@ -24,13 +24,22 @@ ul {
   margin: 0;
 }
 
+p {
+  margin-bottom: 1.25em;
+}
+
+.intro p {
+  font-size: 1.2em;
+}
+
 /* HEADER & FOOTER ----------------------------------------- */
 header {
   height: 460px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3acec2), to(#009fe1)), url("../img/bg.jpg") no-repeat;
-  background: linear-gradient(#3acec2, #009fe1), url("../img/bg.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(#009fe1), to(#3acec2)), url("../img/bg.jpg") no-repeat;
+  background: linear-gradient(#009fe1, #3acec2), url("../img/bg.jpg") no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
+  position: relative;
 }
 
 header h1 {
@@ -46,11 +55,45 @@ header p {
   margin: 0;
 }
 
+header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: skewY(-2deg);
+          transform: skewY(-2deg);
+  background-color: #fff;
+  bottom: -25px;
+}
+
 footer {
   padding: 2em 0 0;
   height: 100px;
   background-color: #eee;
   margin-top: 3.5em;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  -webkit-transform: skewY(-2deg);
+          transform: skewY(-2deg);
+  background-color: #eee;
+  top: -25px;
+}
+
+a {
+  color: #278da4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b13c69;
 }
 
 /* CONTAINERS ---------------------------------------------- */
@@ -81,6 +124,10 @@ footer {
   padding: 0.5em;
 }
 
+.main-nav a:hover {
+  color: #278da4;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,7 +138,7 @@ footer {
           flex-direction: column;
   padding: 1.5em 1em;
   border: 1px solid #eee;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 
 .card > h1 {
@@ -104,15 +151,23 @@ footer {
   color: #278da4;
 }
 
-.btn-info {
+.btn {
   color: #fff;
   display: inline-block;
-  font-size: 0.85em;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
+}
+
+.btn-callout {
+  font-size: 1.1em;
+  background-color: #b13c69;
+}
+
+.btn-info {
+  font-size: 0.85em;
   background-color: #278da4;
   margin-top: auto;
 }
