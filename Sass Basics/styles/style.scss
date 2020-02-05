@@ -1,3 +1,4 @@
+/* VARIABLES ------------------------------------------------- */
 $color-primary: #278da4;
 $color-secondary: #b13c69;
 $color-accent: #eeea72;
@@ -9,6 +10,21 @@ $color-bg-light: #009fe1;
 
 $font-stack-primary: "Raleway", sans-serif;
 $font-stack-secondary: "Bree Serif", serif;
+
+/* MIXINS ------------------------------------------------- */
+
+@mixin skewed {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  transform: skewY(-2deg);
+}
+
+@mixin center {
+  margin: 0 auto;
+}
 
 /* BASE ------------------------------------------------- */
 
@@ -65,11 +81,7 @@ header {
 
   &::after {
     content: "";
-    display: block;
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    transform: skewY(-2deg);
+    @include skewed;
     background-color: #fff;
     bottom: -25px;
   }
@@ -83,12 +95,7 @@ footer {
   position: relative;
 
   &::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    transform: skewY(-2deg);
+    @include skewed;
     background-color: $color-shade;
     top: -25px;
   }
@@ -129,7 +136,7 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     padding: 0.5em;
-    
+
     &:hover {
       color: $color-primary;
     }
@@ -201,7 +208,7 @@ a {
   .main-content {
     width: 90%;
     max-width: 1000px;
-    margin: 0 auto;
+    @include center;
   }
 }
 
