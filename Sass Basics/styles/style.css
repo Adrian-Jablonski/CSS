@@ -153,7 +153,7 @@ a:hover {
   color: #278da4;
 }
 
-.btn, .btn-callout, .btn-info {
+.btn-callout, .btn-info {
   color: #fff;
   display: inline-block;
   font-weight: bold;
@@ -161,6 +161,15 @@ a:hover {
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
+}
+
+.btn-callout:hover, .btn-info:hover {
+  color: white;
+  opacity: .8;
+}
+
+.btn-callout:active, .btn-info:active {
+  opacity: initial;
 }
 
 .btn-callout {
