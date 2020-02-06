@@ -1,0 +1,27 @@
+// Adding a % symbol creates a placeholder that will make the below class never appear in the css output. The rules will only appear for classes that are extending %btn
+%btn {
+	color: #fff;
+	display: inline-block;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0.75em 1.5em;
+	border-radius: 0.35em;
+
+	&:hover {
+		color: white;
+		opacity: 0.8;
+	}
+	&:active {
+		opacity: initial;
+	}
+}
+
+%clearfix {
+	// Used to clear floats
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
