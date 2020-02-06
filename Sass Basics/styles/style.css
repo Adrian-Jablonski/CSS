@@ -19,6 +19,32 @@
   opacity: initial;
 }
 
+.test {
+  line-height: 2;
+  width: 40%;
+}
+
+header h1 {
+  color: #3acec2;
+}
+
+header p {
+  color: #1b6d67;
+}
+
+.main-nav a {
+  color: #a0e7e2;
+}
+
+.btn-callout {
+  color: #3acec2;
+  background-color: #ce3a46;
+}
+
+.btn-callout:hover {
+  background-color: #d8636c;
+}
+
 /* BASE ------------------------------------------------- */
 * {
   -webkit-box-sizing: border-box;
@@ -254,26 +280,5 @@ a:hover {
   header {
     background-position: 0 0, 0 45%;
   }
-}
-
-header h1 {
-  color: #3acec2;
-}
-
-header p {
-  color: #1b6d67;
-}
-
-.main-nav a {
-  color: #a0e7e2;
-}
-
-.btn-callout {
-  color: #3acec2;
-  background-color: #ce3a46;
-}
-
-.btn-callout:hover {
-  background-color: #d8636c;
 }
 /*# sourceMappingURL=style.css.map */
