@@ -7,6 +7,13 @@
 	@return ($target / $context) * 100%;
 }
 
+@function per-line($items) {
+	// Function that determines the width of flex items given the amount of items and margins
+	$g-pct: px-to-pc($gutter) * 2;
+	$g-total: $items * $g-pct;
+	@return (100% / $items) - $g-total;
+}
+
 .test {
 	line-height: divide(32px, 16px);
 	width: px-to-pc(400px);

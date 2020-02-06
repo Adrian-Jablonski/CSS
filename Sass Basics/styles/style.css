@@ -192,6 +192,7 @@ a:hover {
   padding: 1.5em 1em;
   border: 1px solid #eee;
   border-radius: 0.25em;
+  margin: 2px;
 }
 
 .card > h1 {
@@ -202,6 +203,21 @@ a:hover {
 .card .icon,
 .card h1 {
   color: #278da4;
+}
+
+@media (min-width: 576px) {
+  .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 49.2%;
+            flex: 1 49.2%;
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    -ms-flex-preferred-size: 32.13333%;
+        flex-basis: 32.13333%;
+  }
 }
 
 .btn-callout {
@@ -268,11 +284,6 @@ a:hover {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  .card {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
   }
 }
 
