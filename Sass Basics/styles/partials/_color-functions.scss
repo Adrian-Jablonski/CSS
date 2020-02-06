@@ -1,0 +1,27 @@
+$base: #3acec2;
+$base-dark: darken($base, 25%);
+$base-light: lighten($base, 25%);
+
+$complement: complement($base);
+$complement-light: lighten($complement, 10%);
+
+header {
+	h1 {
+		color: $base;
+	}
+	p {
+		color: $base-dark;
+	}
+}
+
+.main-nav a {
+	color: $base-light;
+}
+
+.btn-callout {
+	color: $base;
+	background-color: $complement;
+	&:hover {
+		background-color: $complement-light;
+	}
+}
