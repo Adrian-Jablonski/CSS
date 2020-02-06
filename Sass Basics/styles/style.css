@@ -127,6 +127,12 @@ a:hover {
   padding: 1em 1em 3em;
 }
 
+@media (min-width: 992px) {
+  .intro {
+    width: 45%;
+  }
+}
+
 /* COMPONENTS ----------------------------------------------- */
 .main-nav {
   margin-top: 1em;
@@ -183,6 +189,37 @@ a:hover {
   margin-top: auto;
 }
 
+.img-featured {
+  width: 165px;
+  border: 4px solid white;
+  border-radius: 50%;
+  margin-top: 75px;
+  position: relative;
+  z-index: 100;
+}
+
+@media (max-width: 575px) {
+  .img-featured {
+    display: none;
+  }
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
 /* MEDIA QUERIES ------------------------------------------------- */
 @media (max-width: 575px) {
   header {
@@ -190,9 +227,6 @@ a:hover {
   }
   header h1 {
     font-size: 3.4em;
-  }
-  .img-featured {
-    display: none;
   }
 }
 
@@ -211,20 +245,9 @@ a:hover {
   }
 }
 
-@media (min-width: 768px) {
-  .main-content {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-}
-
 @media (min-width: 992px) {
   header {
     background-position: 0 0, 0 45%;
-  }
-  .intro {
-    width: 45%;
   }
 }
 /*# sourceMappingURL=style.css.map */
