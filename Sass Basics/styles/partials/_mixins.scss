@@ -13,6 +13,28 @@
 	}
 }
 
-	@mixin center {
+@mixin center($w) {
+	width: $w;
+	max-width: $max-width;
 	margin: 0 auto;
+}
+
+@mixin roundy($dim, $brdr: null) {
+	// null allows the parameter to be ommitted without outputting CSS
+	width: $dim;
+	height: $dim;
+	border: $brdr;
+	border-radius: 50%;
+}
+
+@mixin flexy(
+	$disp: flex,
+	$dir: null,
+	$wrap: null,
+	$just: null
+) {
+	display: $disp;
+	flex-direction: $dir;
+	flex-wrap: $wrap;
+	justify-content: $just;
 }

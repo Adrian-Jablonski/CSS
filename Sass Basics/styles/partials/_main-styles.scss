@@ -117,8 +117,8 @@ a {
 }
 
 .card {
-	display: flex;
-	flex-direction: column;
+	@include flexy($dir: column);
+	
 	padding: 1.5em 1em;
 	border: 1px solid $color-shade;
 	border-radius: 0.25em;
@@ -155,9 +155,8 @@ a {
 }
 
 .img-featured {
-	width: 165px;
+	@include roundy(165px, 4px solid $white);
 	border: 4px solid white;
-	border-radius: 50%;
 	margin-top: 75px;
 	position: relative;
 	z-index: 100;
@@ -168,13 +167,11 @@ a {
 }
 
 .main-content {
-	display: flex;
-	flex-wrap: wrap;
+	@include flexy($wrap: wrap);
 
 	@media (min-width: $break-m) {
-		width: 90%;
 		max-width: 1000px;
-		@include center;
+		@include center(90%);
 	}
 }
 
