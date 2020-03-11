@@ -118,7 +118,7 @@ a {
 
 .card {
 	@include flexy($dir: column);
-	
+
 	padding: 1.5em 1em;
 	border: 1px solid $color-shade;
 	border-radius: 0.25em;
@@ -161,7 +161,7 @@ a {
 	position: relative;
 	z-index: 100;
 
-	@media (max-width : $break-xs) {
+	@include mq('xs') {
 		display: none;
 	}
 }
@@ -169,7 +169,7 @@ a {
 .main-content {
 	@include flexy($wrap: wrap);
 
-	@media (min-width: $break-m) {
+	@include mq('med') {
 		max-width: 1000px;
 		@include center(90%);
 	}
