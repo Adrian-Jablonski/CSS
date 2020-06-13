@@ -1,8 +1,13 @@
 .grid {
 	max-width: 800px;
 	display: grid;
+
 	/* 2fr 1fr 1fr 1fr */
 	/* grid-template-columns: 2fr repeat(3, 1fr);   */
+
+	/* column-gap: 15px;
+	row-gap: 20px; */
+	grid-gap: 25px 20px;
 
 	/* Min max sets the min / max of the column */
 	/* grid-template-columns: minmax(200px, 1fr) 1fr 1fr;  */
@@ -11,10 +16,18 @@
 	/* grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); */
 
 	/* Auto fit expands the columns to fit the container */
-	grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-	
+	/* grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); */
+
+	/* ***** EXPLICIT AND IMPLICIT GRID ***** */
+	/* Defined Explicit Grid */
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 100px 200px;
-	/* column-gap: 15px;
-	row-gap: 20px; */
-	grid-gap: 15px 20px;
+
+	/* grid-auto-rows and grid-auto-columns control implicit column tracks */
+	/* Sets all rows after the defined grid-template-rows to a minimum of 250px and a maximum of the content height */
+	grid-auto-rows: minmax(250px, auto );
+	
+	/* grid-auto-flow defaults to rows. Setting to columns creates new implicit columns instead of rows */
+	grid-auto-flow: column; 
+
 }
