@@ -6,24 +6,36 @@
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 100px minmax(200px, 1fr) 100px;
+	grid-template-rows: 100px minmax(200px, 1fr) 100px 100px;
 	grid-gap: 10px;
 }
 
-header,
-footer {
-	grid-column-end: 3;
-}
-
 header {
-	grid-column-start: 1;
+	/* -1 stretches to end of row */
+	
+	/* grid-column-start: 1;
+	grid-column-end: -1;  */
+	/* Shorthand */
+	grid-column: 1 / -1;
 }
 
 main {
-	grid-row-start: 2;
-	grid-row-end: 4;
+	/* grid-row-start: 2;
+	grid-row-end: 3; */
+	grid-row: 2 / 3;
+}
+
+aside {
+	/* grid-row-start: 2;
+	grid-row-end: -1; */
+	grid-row: 2 / -1;
 }
 
 footer {
-	grid-column-start: 2;
+	/* grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: -3;
+	grid-row-end: -1; */
+	grid-column: 1 / 2;
+	grid-row: -3 / -1;
 }
